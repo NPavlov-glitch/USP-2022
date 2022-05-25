@@ -9,7 +9,7 @@ if ( ! empty( $_POST ) ) {
 		if ( is_int( $value ) ) {
 			$sql .= " `" . $key . "` = " . $value . "";
 		} else {
-			$sql .= " `" . $key . "` = '" . $value . "'";
+			$sql .= " `" . $key . "` LIKE '%" . $value . "%'";
 		}
 		
 		if ( ! empty( next($_POST) ) ) {
