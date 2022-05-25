@@ -57,8 +57,6 @@ if ( ! array_filter( $errors ) ) {
 
 	if( mysqli_query( $db_connection, $sql ) ){
 		header('Location: index.php');
-	} else {
-		echo 'query error: ' . mysqli_error( $db_connection );
 	}
 }
 ?>

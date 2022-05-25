@@ -22,11 +22,11 @@
 		<div class="elements">
 			<ul>
 				<li class="element1">
-					<a href="/index.php">Телефони</a>
+					<a href="index.php">Телефони</a>
 				</li>
 				
 				<li class="element2">
-					<a href="/add.php">Добави телефон</a>
+					<a href="add.php">Добави телефон</a>
 				</li>
 			</ul>
 		</div>
