@@ -1,6 +1,6 @@
 <?php
 $sql = "SELECT * FROM devices";
-    
+
 $result = mysqli_query( $db_connection, $sql );
 
 $devices = mysqli_fetch_all( $result, MYSQLI_ASSOC );
@@ -13,33 +13,57 @@ mysqli_close( $db_connection );
 	<?php foreach ( $devices as $device ) : ?>
 		<div class="phone">
 			<div class="phone_img">
-				<img src="img/phone1.jpg">
+				<?php switch ( $device['brand'] ) {
+					case 'Samsung': ?>
+					<img src="img/samsung.webp">
+					<?php break;
+					
+					case 'Motorola': ?>
+					<img src="img/motorola.jpg">
+					<?php break;
+
+					case 'Xiaomi': ?>
+					<img src="img/phone1.jpg">
+					<?php break;
+
+					case 'Nokia': ?>
+					<img src="img/nokia.jpg">
+					<?php break;
+
+					case 'LG': ?>
+					<img src="img/lg.webp">
+					<?php break;
+					
+					default: ?>
+					<img src="img/phone1.jpg">
+					<?php break;
+				} ?>
 			</div>
 			
 			<div class="phone_txt">
 				<ul>
 					<li>
-						Марка: Xiaomi
+						Марка: <?php echo htmlspecialchars( $device['brand'] ); ?>
 					</li>
 					
 					<li>
-						Модел: Redmi Note 11 Pro
+						Модел: <?php echo htmlspecialchars( $device['model'] ); ?>
 					</li>
 					
 					<li>
-						Екран: 6.67"
+						Екран: <?php echo htmlspecialchars( $device['screen'] ) . ' "'; ?>
 					</li>
 					
 					<li>
-						Камера: 108 MP
+						Камера: <?php echo htmlspecialchars( $device['camera'] ) . ' MP'; ?>
 					</li>
 					
 					<li>
-						Памет: 128 GB
+						Памет: <?php echo htmlspecialchars( $device['memory'] ) . ' GB'; ?>
 					</li>
 					
 					<li>
-						Цена: 500 лв
+						Цена: <?php echo htmlspecialchars( $device['price'] ) . ' лв'; ?>
 					</li>
 				</ul>
 			</div>
