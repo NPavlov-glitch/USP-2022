@@ -17,7 +17,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="brand" class="dropdown">
+				<select type="select" name="brand" class="dropdown" id="brand">
+					<option value="all">Brand</option>
 					<?php foreach ( $brands as $brand ) : ?>
 						<option value="<?php echo htmlspecialchars( $brand ); ?>">
 							<?php echo htmlspecialchars( $brand ); ?>
@@ -31,7 +32,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="model" class="dropdown">
+				<select type="select" name="model" class="dropdown" id="model">
+					<option value="all">Model</option>
 					<?php foreach ( $models as $model ) : ?>
 						<option value="<?php echo htmlspecialchars( $model ); ?>">
 							<?php echo htmlspecialchars( $model ); ?>
@@ -45,7 +47,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="screen" class="dropdown">
+				<select type="select" name="screen" class="dropdown" id="screen">
+					<option value="all">Screen</option>
 					<?php foreach ( $screens as $screen ) : ?>
 						<option value="<?php echo htmlspecialchars( $screen ); ?>">
 							<?php echo htmlspecialchars( $screen ); ?>
@@ -59,7 +62,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="camera" class="dropdown">
+				<select type="select" name="camera" class="dropdown" id="camera">
+					<option value="all">Camera</option>
 					<?php foreach ( $cameras as $camera ) : ?>
 						<option value="<?php echo htmlspecialchars( $camera ); ?>">
 							<?php echo htmlspecialchars( $camera ); ?>
@@ -73,7 +77,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="memory" class="dropdown">
+				<select type="select" name="memory" class="dropdown" id="memory">
+					<option value="all">Memory</option>
 					<?php foreach ( $memories as $memory ) : ?>
 						<option value="<?php echo htmlspecialchars( $memory ); ?>">
 							<?php echo htmlspecialchars( $memory ); ?>
@@ -87,7 +92,8 @@ $prices   = get_results_from_db_table( "SELECT `price` FROM `devices`;", $db_con
 			</li>
 
 			<li>
-				<select type="select" name="price" class="dropdown">
+				<select type="select" name="price" class="dropdown" id="price">
+					<option value="all">Price</option>
 					<?php foreach ( $prices as $price ) : ?>
 						<option value="<?php echo htmlspecialchars( $price ); ?>">
 							<?php echo htmlspecialchars( $price ); ?>

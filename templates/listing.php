@@ -1,5 +1,24 @@
 <?php
-$sql = "SELECT * FROM devices";
+$sql = "SELECT * FROM devices ORDER BY `devices`.`id` DESC";
+
+if ( ! empty( $_POST ) ) {
+
+	$sql = "SELECT * FROM `devices` WHERE ";
+		
+	foreach ( $_POST as $key => $value ) {
+		if ( is_int( $value ) ) {
+			$sql .= " `" . $key . "` = " . $value . "";
+		} else {
+			$sql .= " `" . $key . "` = '" . $value . "'";
+		}
+		
+		if ( ! empty( next($_POST) ) ) {
+			$sql .= " AND ";
+		}
+	}
+
+	$sql .= " ORDER BY `devices`.`id` DESC";
+}
 
 $result = mysqli_query( $db_connection, $sql );
 

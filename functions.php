@@ -14,6 +14,5 @@ function get_results_from_db_table( $query, $db_connection, $row ) {
 		array_push( $results_array, $result[ $row ] );
 	}
 	
-
 	return $results_array;
 }
