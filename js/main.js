@@ -45,11 +45,19 @@ $(document).ready(function() {
 				memory : selectedMemory,
 				price  : selectedPrice,
 			},
+			beforeSend: function() {
+				$('.items').hide();
+				$('.spinner').show();
+			},
 			success: function(response) {
 				$('.items').replaceWith($(response).find('.items'));
 			},
+			complete: function() {
+				$('.items').show();
+				$('.spinner').hide();
+			},
 			error: function(error) {
-				console.log('ne');
+				console.log(error);
 			}
 		});
 	});

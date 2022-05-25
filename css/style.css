@@ -76,6 +76,7 @@ a:link, a:visited {
 .items {
 	float: left;
 	width: 80%;
+	margin: 20px;
 }
 
 
@@ -165,4 +166,24 @@ a:link, a:visited {
 .dropdown option {
 	text-align: center;
 	border-radius: 15px;
+}
+
+.no_results {
+	font-size: 25px;
+	font-family: sans-serif;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.spinner {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+
+.red-text {
+    color: red;
+    font-size: 15px;
+    padding-left: 155px;
 }
