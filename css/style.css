@@ -78,21 +78,7 @@ a:link, a:visited {
 	width: 80%;
 }
 
-.filter {
-	float: left;
-	width: 15%;
-	border-right: 2px solid #abb8c3;
-}
 
-.filter h2 {
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-.filter li {
-	margin-bottom: 10px;
-	font-size: 110%;
-}
 
 .phone {
 	height: 150px;
@@ -139,3 +125,44 @@ a:link, a:visited {
 
 
 /* Filter Styles */
+
+.filter {
+	float: left;
+	width: 15%;
+	border-right: 2px solid #abb8c3;
+}
+
+.filter form {
+	margin-left: -40px;
+}
+
+.filter h2 {
+	font-family: sans-serif;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.filter li {
+	padding: 5px;
+	font-size: 110%;
+	text-align: center;
+}
+
+.filter label {
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+.dropdown {
+	width: 150px;
+	border-radius: 15px;
+	color: #474747;
+	text-align: left;
+	height: 22px;
+	text-align-last: center;
+}
+
+.dropdown option {
+	text-align: center;
+	border-radius: 15px;
+}
